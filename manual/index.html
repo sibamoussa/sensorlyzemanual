@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Manual - Sensorlyze Manual</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Manual";
+    var mkdocs_page_input_path = "manual.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Sensorlyze Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Manual</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-getting-started-installing-sensorlyze">1.  Getting Started: Installing Sensorlyze</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#running-the-executable-file">Running the executable file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#running-the-open-source-python-code">Running the open-source python code</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-using-sensorlyze-start-and-experiment-selection">2. Using Sensorlyze : Start and Experiment Selection</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#acceptable-file-formats">Acceptable File Formats</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-analysis-options">3. Analysis Options</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#single-sensor-calibration">Single Sensor Calibration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#multiple-sensor-calibration">Multiple Sensor Calibration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#quantification">Quantification</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-visualization">Data Visualization</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../license/">Copyright and Licenses</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../changelog/">Development Changelog</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../versions/">Version Releases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../issues/">Known Issues</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../reportbugs/">Reporting Bugs</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Sensorlyze Manual</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Manual</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="sensorlyze-user-manual">Sensorlyze User Manual</h1>
+<h2 id="1-getting-started-installing-sensorlyze">1.  Getting Started: Installing Sensorlyze</h2>
+<p>Two options are available for running Sensorlyze:</p>
+<ol>
+<li>A standalone executable file</li>
+<li>The open-source python code for the software</li>
+</ol>
+<p>Both options are available through  <em>https://github.com/sibamoussa/Sensorlyze_Software</em></p>
+<h3 id="running-the-executable-file">Running the executable file</h3>
+<p>The .exe file is available for downloading. This version is currently only windows compatible.</p>
+<h3 id="running-the-open-source-python-code">Running the open-source python code</h3>
+<p>To run the python script, download the gui_sensorlyze.py file and supporting .py files. 
+Make sure that the supporting files are in the same folder as\the main script. 
+To  prompt the GUI, run gui_sensorlyze.py. </p>
+<p>The following packages are required to run the script: 
+* numpy
+* pandas
+* scipy
+* scikit
+* matplotlib
+* pyqt
+* sklearn</p>
+<h2 id="2-using-sensorlyze-start-and-experiment-selection">2. Using Sensorlyze : Start and Experiment Selection</h2>
+<p>Once the software is prompted to run either by running the source code or by clicking on the icon of the .exe file, 
+a window will appear, prompting you to start or exit Sensorlyze. </p>
+<p>Sensorlyze contains four modules, defined as experiments. Selecting start will prompt a new window [<em>select experiment</em>] to open. Click on the grey box to see a list of options. 
+To perform the correct analysis, you can navigate through the options and select the option which matches best with your analysis needs:</p>
+<ul>
+<li><code>Single sensor calibration</code> - Analyze chronoamperometric data corresponding to a single sensor/file. </li>
+<li><code>Multiple sensor calibration</code> - Analyze chronoamperometric data corresponding to multiple sensors/files.</li>
+<li><code>Quantification</code> - Select and extract data from regions of interest and quantify concentrations from regression parameters. </li>
+<li><code>Data Visualization</code> - Visualize multiple data files and export them into a single graphic. </li>
+</ul>
+<p><img alt="Workflow to begin using Sensorlyze" src="img/Figure1.tiff" /></p>
+<h3 id="acceptable-file-formats">Acceptable File Formats</h3>
+<p>The import file functionality currently supports the following file types:  </p>
+<pre><code> *.asc    # HEKA file format. 
+ *.txt    # Biologic file format
+ *.txt    # CH Instruments file format  **
+ *.xslx   # Excel file format           **
+
+ **These file formats are not supported by the Data Visualization analysis option*
+</code></pre>
+<h2 id="3-analysis-options">3. Analysis Options</h2>
+<h3 id="single-sensor-calibration">Single Sensor Calibration</h3>
+<p>This window is split into two main tabs. 
+To go through the data analysis follow the steps outlined for each tab:</p>
+<p><em><strong>Tab 1: Visualize Data</strong></em> 
+  1. Import a data file to visualize: 
+        To import, select the file in the directory of choice. 
+  2. Select the Manufacturer and file type:
+        The import file option currently supports files from the following manufacturers: HEKA, Biologic, CH Instruments, Excel 
+        Select the desired file type to proceed. 
+  3. Plot File:
+        Current-time data within the selected file will be plotted.<br />
+  4. Clear Plot: 
+       Plotted data will be cleared from the window. Clicking on plot file will cause the data to reappear. 
+       Alternatively, a new data file may be imported using the steps outlined earlier and plotted. 
+  5. Save Plot:
+       The plot will be saved in the directory of your choice.
+        Current supported file formats for saving graphics are: <code>*.jpg</code> and <code>*.tiff</code> file formats </p>
+<p><em><strong>Tab 2: Single Sensor Analytics</strong></em> 
+ 1. Import data file of choice
+ 2. Select manufacturer and file type
+ 3. Plot file
+ 4. Apply noise reduction filter to data
+ 5. Select points (with or without noise-reduction filter-  range is automatically set to 30 seconds, but can be modified)
+ 6. Input concentrations that match the selected points 
+ 7. Export current data
+ 8. Save the current plot 
+ 9. Clear the plot
+ 10. Regress the data
+ 11. Plot the calibration curve
+ 12. Normalize plot
+ 13. Plot normalized plot 
+ 14. Export/Clear/Save calibration curve 
+ 15. Export/Clear/Save normalized plot
+ 16. Export all data </p>
+<ul>
+<li>Formatting<ul>
+<li><strong>Currently under development</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="multiple-sensor-calibration">Multiple Sensor Calibration</h3>
+<p>This window is split into three main tabs:
+- Visualize Data : Allows you to select data file and plot them individually
+1. Select up to 5 data files and plot them individually
+2. Select the manufacturer type
+3. Press next to plot the next data file
+4. Clear only the previous plot
+5. Save each plot</p>
+<ul>
+<li>Analytics- Calibration Point Selection</li>
+<li>Import data file of choice</li>
+<li>Select manufacturer and file type</li>
+<li>Plot file &amp; a new file will show up every time </li>
+<li>Apply noise reduction filter to data</li>
+<li>Select points (with or without noise-reduction filter-  range is automatically set to 30 seconds, but can be modified)</li>
+<li>Input concentrations that match the selected points </li>
+<li>Export selected points</li>
+<li>
+<p>Go to the calibration window</p>
+</li>
+<li>
+<p>Analytics- Calibration Statistics</p>
+</li>
+<li>Plot the calibration</li>
+<li>Plot the normalized calibration</li>
+<li>Save the calibration/ normalized calibration plot</li>
+<li>Export data</li>
+</ul>
+<h3 id="quantification">Quantification</h3>
+<p>This window is split into three main tabs:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        bplit into three main tabs:
+- Visualize Data
+1. Import a file and visualize it 
+2. Select a manufacturer &amp; file type
+3. Plot file, save figure and clear plot</p>
+<ul>
+<li>Analytics - Point Selection</li>
+<li>Import a data file to visualize</li>
+<li>Select the manufacturer &amp; file type</li>
+<li>Apply a noise reduction filer </li>
+<li>Select the time range over which the values are to be averaged / done</li>
+<li>Select points </li>
+<li>Export selected points </li>
+<li>Clear selections </li>
+<li>
+<p>Done</p>
+</li>
+<li>
+<p>Analytics - Analyte Quantification</p>
+</li>
+<li>Input the regression line slope</li>
+<li>Input the regression line intercept</li>
+<li>Input the current value </li>
+<li>Done with all inputs </li>
+<li>Calculate concentration</li>
+<li>Export table with calculated concentrations and readings </li>
+<li>Clear table </li>
+</ul>
+<h3 id="data-visualization">Data Visualization</h3>
+<p>This window is split into two tabs </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../license/" class="btn btn-neutral float-right" title="Copyright and Licenses">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../about/" class="btn btn-neutral" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../about/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../license/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
