@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Manual - Sensorlyze Manual</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Manual";
+    var mkdocs_page_input_path = "manual.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Sensorlyze Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Manual</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-getting-started-installing-sensorlyze">1.  Getting Started: Installing Sensorlyze</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#running-the-executable-file">Running the executable file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#running-the-open-source-python-code">Running the open-source python code</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-using-sensorlyze-start-and-experiment-selection">2. Using Sensorlyze : Start and Experiment Selection</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#acceptable-file-formats">Acceptable File Formats</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-analysis-options">3. Analysis Options</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#single-sensor-calibration">Single Sensor Calibration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#multiple-sensor-calibration">Multiple Sensor Calibration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#quantification">Quantification</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-visualization">Data Visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#under-development">Under Development</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../license/">Copyright and Licenses</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../changelog/">Development Changelog</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../versions/">Version Releases</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../issues/">Known Issues</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../reportbugs/">Reporting Bugs</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Sensorlyze Manual</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Manual</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="sensorlyze-user-manual">Sensorlyze User Manual</h1>
+<h2 id="1-getting-started-installing-sensorlyze">1.  Getting Started: Installing Sensorlyze</h2>
+<p>Two options are available for running Sensorlyze:</p>
+<ol>
+<li>A standalone executable file</li>
+<li>The open-source python code for the software</li>
+</ol>
+<p>Both options are available through  <em>https://github.com/sibamoussa/Sensorlyze_Software</em></p>
+<h3 id="running-the-executable-file">Running the executable file</h3>
+<p>The .exe file is available for downloading. This version is currently only windows compatible.</p>
+<h3 id="running-the-open-source-python-code">Running the open-source python code</h3>
+<p>To run the python script, download the gui_sensorlyze.py file and supporting .py files. 
+Make sure that the supporting files are in the same folder as\the main script. 
+To  prompt the GUI, run gui_sensorlyze.py. </p>
+<p>The following packages are required to run the script: 
+* numpy</p>
+<ul>
+<li>
+<p>pandas</p>
+</li>
+<li>
+<p>scipy</p>
+</li>
+<li>
+<p>scikit</p>
+</li>
+<li>
+<p>matplotlib</p>
+</li>
+<li>
+<p>pyqt</p>
+</li>
+<li>
+<p>sklearn</p>
+</li>
+</ul>
+<h2 id="2-using-sensorlyze-start-and-experiment-selection">2. Using Sensorlyze : Start and Experiment Selection</h2>
+<p>Once the software is prompted to run either by running the source code or by clicking on the icon of the .exe file, 
+a window will appear, prompting you to start or exit Sensorlyze. </p>
+<p>Sensorlyze contains four modules, defined as experiments. Selecting start will prompt a new window [<em>select experiment</em>] to open. Click on the grey box to see a list of options. 
+To perform the correct analysis, you can navigate through the options and select the option which matches best with your analysis needs:</p>
+<ul>
+<li><code>Single sensor calibration</code> - Analyze chronoamperometric data corresponding to a single sensor/file. </li>
+<li><code>Multiple sensor calibration</code> - Analyze chronoamperometric data corresponding to multiple sensors/files.</li>
+<li><code>Quantification</code> - Select and extract data from regions of interest and quantify concentrations from regression parameters. </li>
+<li><code>Data Visualization</code> - Visualize multiple data files and export them into a single graphic. </li>
+</ul>
+<h3 id="acceptable-file-formats">Acceptable File Formats</h3>
+<p>The import file functionality currently supports the following file types:  </p>
+<pre><code> *.asc    # HEKA file format. 
+ *.txt    # Biologic file format
+ *.txt    # CH Instruments file format  **
+ *.xslx   # Excel file format           **
+
+ **These file formats are not supported by the Data Visualization analysis option*
+</code></pre>
+<h2 id="3-analysis-options">3. Analysis Options</h2>
+<h3 id="single-sensor-calibration">Single Sensor Calibration</h3>
+<p>This window is split into two main tabs. 
+To go through the data analysis follow the steps outlined for each tab:</p>
+<p><em><strong>Tab 1: Visualize Data</strong></em> </p>
+<ol>
+<li>
+<p>Import a data file to visualize: </p>
+<p>To import, select the file in the directory of choice. </p>
+</li>
+<li>
+<p>Select the Manufacturer and file type:</p>
+<p>The import file option currently supports files from the following manufacturers: HEKA, Biologic, CH Instruments, Excel </p>
+<p>Select the desired file type to proceed. </p>
+</li>
+<li>
+<p>Plot File:</p>
+<p>Current-time data within the selected file will be plotted. </p>
+</li>
+<li>
+<p>Clear Plot: </p>
+<p>Plotted data will be cleared from the window. Clicking on plot file will cause the data to reappear. </p>
+<p>Alternatively, a new data file may be imported using the steps outlined earlier and plotted. </p>
+</li>
+<li>
+<p>Save Plot:</p>
+<p>The plot will be saved in the directory of your choice.</p>
+<p>Current supported file formats for saving graphics are: <code>*.jpg</code> and <code>*.tiff</code> file formats </p>
+</li>
+</ol>
+<p><em><strong>Tab 2: Single Sensor Analytics</strong></em> </p>
+<ol>
+<li>
+<p>Import a data file to visualize: </p>
+<p>To import, select the file in the directory of choice.  </p>
+</li>
+<li>
+<p>Select the Manufacturer and file type:</p>
+<p>The import file option currently supports files from the following manufacturers: HEKA, Biologic, CH Instruments, Excel </p>
+<p>Select the desired file type to proceed.  </p>
+</li>
+<li>
+<p>Plot File:</p>
+<p>Current-time data within the selected file will be plotted.  </p>
+</li>
+<li>
+<p>Apply Noise Reduction Filter:</p>
+<p>Checking the box will apply the noise reduction filter.</p>
+<p>The data is filtered using a first-degree polynomial Savitzky-Golay filter. The Savitzky-Golay filter uses convolution-based filtering, i.e. fitting sub-sets of data points with a low degree polynomial using linear least squares. </p>
+<p>Unchecking the box will remove the noise filtered data and the original data will reappear. </p>
+</li>
+<li>
+<p>Clear Plot:  </p>
+<p>Clicking this button will clear the plot of the raw or filtered data. </p>
+</li>
+<li>
+<p>Save Plot:  </p>
+<p>The plot will be saved in the directory of your choice.</p>
+<p>Current supported file formats for saving graphics are: <code>*.jpg</code> and <code>*.tiff</code> file formats</p>
+</li>
+<li>
+<p>Select Points:</p>
+<p>Checking the select points box will allow you to extract the mean of the current values over a time period of 30 seconds. </p>
+<p>Once the checkbox for select points is chosen, a blue bar will appear. The blue bar is automatically set to average data over a range of 30s. The range can be changed by moving either xmin or the xmax limit of the bar further or closer (hover over the limit under a red vertical line appears and then drag the line)</p>
+<p>Select points (with or without noise-reduction filter-  range is automatically set to 30 seconds, but can be modified)</p>
+<p>To select multiple points, click in the middle of the bar, and drag the bar to the region(s) of interest. You can select as many regions as you desire.  </p>
+</li>
+<li>
+<p>Please input all concentrations with a space in between :</p>
+<p>Once you have selected the points of interest, to build a calibration curve, you must enter the concentrations corresponding to each selection. </p>
+<p>Make sure to enter the concentrations in μM and with a space in between each value. </p>
+</li>
+<li>
+<p>Done:</p>
+<p>When you have finished entering concentrations, click on the button done to proceed. </p>
+</li>
+<li>
+<p>Export Data:</p>
+<p>Clicking on export data will export the mean currents from the selected regions and the concentration corresponding to each region. </p>
+<p>The data is automatically exported into an excel sheet named "Results" in the same working directory as the software files.
+  - If you would like to export points only and no concentrations, enter a range of indices instead of concentrations
+  - If you would like to export the points and concentrations, click export data after including the right concentration corresponding to each mean current.</p>
+</li>
+<li>
+<p>Plot Calibration:</p>
+<p>Clicking on <code>plot calibration</code> will allow you to visualize the current-time calibration profile </p>
+<p>Once you click <code>plot calibration</code>, the calibration profile will appear along with three other options:
+    - Save Plot: Save the graphic in <code>*.tiff</code> or <code>*.jpg</code> file formats 
+    - Clear Calibration Plot: Clear the calibration plot 
+    - Export Calibration: The data will export to an excel sheet called <strong>Results</strong> in the same working directory as the software
+                         If the <code>regress data?</code> box is checked, then the regression parameters will also export to the same excel sheet. </p>
+</li>
+<li>
+<p>Normalize Plot?: </p>
+<p>Checking the box for normalize plot will normalize to the baseline through background current substraction.</p>
+<p>i.e. the first selected set of points using select points correspond to the current from the background signal. All following mean currents are substracted from this baseline signal. </p>
+</li>
+<li>
+<p>Plot Normalized Calibration:</p>
+<p>Clicking on <code>plot normalized calibration</code> will allow you to visualize the current-time calibration profile </p>
+<p>Once you click <code>plot normalized calibration</code>, the calibration profile will appear along with three other options:
+    - Save Plot: Save the graphic in <code>*.tiff</code> or <code>*.jpg</code> file formats 
+    - Clear Normalized Calibration: Clear the calibration plot 
+    - Export Normalized Calibration: The data will export to an excel sheet called <strong>Results</strong> in the same working directory as the software
+                          If the <code>regress data?</code> box is checked, then the regression parameters will also export to the same excel sheet.   </p>
+</li>
+<li>
+<p>Regress Data?: </p>
+<p>Checking the box for regress data will cause the following regression parameters to appear in a textbox above the calibration plot:
+    - Slope, Intercept, R²</p>
+<p>To show the regression data for the unnormalized calibration curve, make sure that the checkbox for for normalize plot is unchecked.</p>
+<p>To show the regression data for the normalized calibration curve, make sure that the checkbox for for normalize plot is checked.</p>
+</li>
+<li>
+<p>Export all Data:</p>
+<p>Clicking on export data will allow you to export all data obtained from this module into a single excel files consisting of multiple sheets. 
+ - To export the data correctly, please ensure that you have regressed the data for both the unnormalized and normalized calibrations
+ Exporting the data will generate an excel file with three sheets which consist of:
+ - Raw current-time series data
+ - Calibration data including the mean current values for each concentration and the regression parameters
+ - Normalized calibration data including the mean current values for each concentration and the regression parameters</p>
+</li>
+</ol>
+<h3 id="multiple-sensor-calibration">Multiple Sensor Calibration</h3>
+<p>This window is split into three main tabs. 
+To go through the data analysis follow the steps outlined for each tab:</p>
+<p><em><strong>Tab 1: Visualize Data</strong></em> </p>
+<ol>
+<li>
+<p>Import a data file to visualize: </p>
+<p>To import, select the file in the directory of choice.</p>
+</li>
+<li>
+<p>Select the Manufacturer and file type:</p>
+<p>The import file option currently supports files from the following manufacturers: HEKA, Biologic, CH Instruments, Excel </p>
+<p>Select the desired file type to proceed.</p>
+</li>
+<li>
+<p>Plot File:</p>
+<p>Current-time data within the selected file will be plotted.  </p>
+</li>
+<li>
+<p>Save Plot:</p>
+<p>The plot will be saved in the directory of your choice.</p>
+<p>Current supported file formats for saving graphics are: <code>*.jpg</code> and <code>*.tiff</code> file formats </p>
+</li>
+<li>
+<p>Clear  Plot:</p>
+<p>Data from the most currently plotted file will be cleared from the window. Clicking on plot file will cause the data to reappear. </p>
+</li>
+</ol>
+<p><em><strong>Tab 2: Analytics- Calibration Point Selection</strong></em> </p>
+<ol>
+<li>
+<p>Import a data file to visualize: </p>
+<p>To import, select the file in the directory of choice. </p>
+</li>
+<li>
+<p>Select the Manufacturer and file type:</p>
+<p>The import file option currently supports files from the following manufacturers: HEKA, Biologic, CH Instruments, Excel </p>
+<p>Select the desired file type to proceed.</p>
+</li>
+<li>
+<p>Plot File:</p>
+<p>Current-time data within the selected file will be plotted.  </p>
+<p>You may select multiple regions considered as points (the mean over the range selected is automatically calculated).</p>
+<p>To select new regions, drag the blue bar to the region of interest.</p>
+<p>Make sure you keep count of how many regions were selected in the first file as all selects made in the following files must have the same number of selections. </p>
+</li>
+<li>
+<p>Apply Noise Reduction Filter:</p>
+<p>Checking the box will apply the noise reduction filter.</p>
+<p>The data is filtered using a first-degree polynomial Savitzky-Golay filter. The Savitzky-Golay filter uses convolution-based filtering, i.e. fitting sub-sets of data points with a low degree polynomial using linear least squares. </p>
+<p>Unchecking the box will remove the noise filtered data and the original data will reappear. </p>
+<p>If you select points from the noise filtered plot, the points exported will not contain the original raw data. </p>
+<p>Instead, for the specific file, the mean currents from the noise filtered data are presented. </p>
+</li>
+<li>
+<p>Next:</p>
+<p>Click on next when you would like to proceed to visualizing the next data file. The next data file does not have to be the same file format as the previously plotted file. Make sure you change the manufacturer by selecting a new manufacturer. </p>
+</li>
+<li>
+<p>Please input all concentrations with a space in between :</p>
+<p>Once you have selected the points of interest, to build a calibration curve, you must enter the concentrations corresponding to each selection. </p>
+<p>Make sure to enter the concentrations in μM and with a space in between each value. </p>
+</li>
+<li>
+<p>Done:</p>
+<p>When you have finished entering concentrations, click on the button done to proceed. </p>
+</li>
+<li>
+<p>Plots Done: </p>
+<p>When you have completed analyzing all your desired files, click on this button. </p>
+<p>You must click this button only after entering the done button for concentrations. Otherwise, you will run into issues with correctly exporting the data.</p>
+<p>If you forget to click on the <code>Done</code> button for concentrations and you click on the <code>Plots Done</code>, you can still export the data correctly. </p>
+<p>All you need to do is enter the concentrations, click on <code>Done</code>, and click again on <code>Plots Done</code>.</p>
+</li>
+<li>
+<p>Export Data:</p>
+<p>Clicking on export data will export the data to an excel file with multiple sheets as follows:
+   - Sheet 1 (Individual file currents): Rows for each file imported. Each column has the data point with the selection corresponding to the index.  <br />
+   - Sheet 2 (Mean Currents vs. Concs) : One with column with the concentrations and another column with the corresponding mean. </p>
+<p>This will not work if you have not entered concentration values.</p>
+<p>The data is automatically exported into an excel sheet named "Results" in the same working directory as the software files.</p>
+<p>If you would like to export points only and no concentrations, enter a range of indices instead of concentrations.</p>
+</li>
+<li>
+<p>Go to Calibrations:</p>
+<p>Clicking on <code>Go to Calibrations</code> will move the current tab to the next tab <code>Analytics-Calibration Statistics</code> where the regression parameters for the calibrations are shown. </p>
+</li>
+</ol>
+<p><em><strong>Tab 3: Analytics- Calibration Statistics</strong></em> </p>
+<ol>
+<li>
+<p>Plot Calibration:</p>
+<p>Clicking on plot calibration will show a plot of the calibration along with the following regression parameters:
+           - R², Slope, Intercept, LOD<em>, and LOQ</em><em>
+           * LOD is the limit of detection, defined as 3 times the standard deviation of the blank signal divided by the slope of the regression line.
+           </em>* LOQ  is the limit of quantification, defined as 10 times the standard deviation of the blank signal divided by the slope of the regression line. 
+           For more information on detection limits, see [https://en.wikipedia.org/wiki/Detection_limit]
+           Note: Values will show to 3 decimal places. If you get a value of 0, exporting the data will show you the real value.    </p>
+</li>
+<li>
+<p>Save Calibration Plot:</p>
+<p>Clicking on <code>save calibration</code> will allow you to save the plot in the directory of your choice.</p>
+<p>Current supported file formats for saving graphics are: <code>*.jpg</code> and <code>*.tiff</code> file formats </p>
+</li>
+<li>
+<p>Export Calibration Data:</p>
+<p>Clicking on <code>export calibration data</code> will automatically save the calibration data in an excel file named <code>Calibration</code> located in the same working directory as the software. </p>
+<p>The data exported data will consist of two tables in the same sheet: 
+   - Table 1: Columns with the 1) concentration, 2) average currents from all the data files for each concentration , 3) standard deviation for the currents used to calculate the mean current , standard error of the mean (SEM) for each mean current value 
+   - Table 2: Calibration regression statistics [ R², Intercept, Slope, LOD, and LOQ]</p>
+</li>
+<li>
+<p>Plot Normalized Calibration:</p>
+<p>Clicking on plot normalized calibration will show a plot of the normalized calibration along with the following regression parameters:
+           - R², Slope, Intercept, LOD<em>, and LOQ</em>*</p>
+<pre><code>      * LOD is the limit of detection, defined as 3 times the standard deviation of the blank signal divided by the slope of the regression line.
+
+       ** LOQ  is the limit of quantification, defined as 10 times the standard deviation of the blank signal divided by the slope of the regression line. 
+       For more information on detection limits, see [https://en.wikipedia.org/wiki/Detection_limit]
+       Notes:  - Values will show to 3 decimal places. If you get a value of 0, exporting the data will show you the real value.
+               - Normalized currents are background signal subtracted current values.
+</code></pre>
+</li>
+<li>
+<p>Save Normalized Calibration Plot:</p>
+<p>Clicking on <code>save normalized calibration</code> will allow you to save the plot in the directory of your choice.</p>
+<p>Current supported file formats for saving graphics are: <code>*.jpg</code> and <code>*.tiff</code> file formats </p>
+</li>
+<li>
+<p>Export Normalized Calibration Data:</p>
+<p>Clicking on <code>export normalized calibration data</code> will automatically save the calibration data in an excel file named <code>Normalized Calibration</code> located in the same working directory as the software. </p>
+<p>The data exported data will consist of two tables in the same sheet: 
+   - Table 1: Columns with the 1) concentration, 2) background subtracted average currents (normalized average currents) from all the data files for each concentration<em> , 3) standard deviation of the normalized currents used to calculate the mean current</em><em>, standard error of the mean (SEM) for each normalized mean current value</em><strong> 
+   - Table 2: Calibration regression statistics [ R², Intercept, Slope, LOD, LOQ, Standard Deviation of the Blank</strong>**]</p>
+<ul>
+<li>For each set of currents obtained for a single data file, the currents are normalized by subtracting the background current from each current value. Once this has been completed for each file, the mean current for each concentration from the different files is calculated and displayed in the table. 
+   <strong> The standard deviation for the baseline (zero) concentration will always be zero.<br />
+</strong><em> The standard error of the mean for the baseline (zero) concentration will always be zero. 
+   </em>*** For LOD and LOQ calculations, the the standard deviation of the blank used is the standard deviation of the unnormalized current readings for the blank signals. </li>
+</ul>
+</li>
+</ol>
+<h3 id="quantification">Quantification</h3>
+<p>This window is split into three main tabs. 
+To go through the data analysis follow the steps outlined for each tab:</p>
+<p><em><strong>Tab 1: Visualize Data</strong></em> </p>
+<ol>
+<li>
+<p>Import a data file to visualize: </p>
+<p>To import, select the file in the directory of choice. </p>
+</li>
+<li>
+<p>Select the Manufacturer and file type:</p>
+<p>The import file option currently supports files from the following manufacturers: HEKA, Biologic, CH Instruments, Excel </p>
+<p>Select the desired file type to proceed.</p>
+</li>
+<li>
+<p>Plot File:</p>
+<p>Current-time data within the selected file will be plotted.  </p>
+</li>
+<li>
+<p>Save Plot:</p>
+<p>The plot will be saved in the directory of your choice.</p>
+<p>Current supported file formats for saving graphics are: <code>*.jpg</code> and <code>*.tiff</code> file formats </p>
+</li>
+<li>
+<p>Clear Plot:</p>
+<p>Data from the most currently plotted file will be cleared from the window. Clicking on plot file will cause the data to reappear. </p>
+</li>
+</ol>
+<p><em><strong>Tab 2: Analytics- Point Selection</strong></em> </p>
+<ol>
+<li>
+<p>Import a data file to visualize: </p>
+<p>To import, select the file in the directory of choice. </p>
+</li>
+<li>
+<p>Select the Manufacturer and file type:</p>
+<p>The import file option currently supports files from the following manufacturers: HEKA, Biologic, CH Instruments, Excel </p>
+<p>Select the desired file type to proceed.</p>
+</li>
+<li>
+<p>Plot File:</p>
+<p>Current-time data within the selected file will be plotted.      </p>
+</li>
+<li>
+<p>Please input the sampling range over which the values are to be averaged (seconds): </p>
+<p>This option will allow you to enter a sampling range (in seconds) over which the current data is averaged.</p>
+<p>For example, if you would like to get the mean current for a 30 second sampling frequency, enter 30 into the textbox. The current data over a range of 30s will be extracted from the plot each time the blue bar is moved. These values will be averaged over time range to provide a mean current value.</p>
+</li>
+<li>
+<p>Done:</p>
+<p>When you have entered a value to change the sampling range, click on <code>done</code></p>
+<p>A blue bar will appear on the plot. This blue bar can be moved to different regions of the data so that the data over the length of the bar is averaged and saved each time it is moved.</p>
+</li>
+<li>
+<p>Apply Noise Reduction Filter:</p>
+<p>Checking the box will apply the noise reduction filter.</p>
+<p>The data is filtered using a first-degree polynomial Savitzky-Golay filter. The Savitzky-Golay filter uses convolution-based filtering, i.e. fitting sub-sets of data points with a low degree polynomial using linear least squares. </p>
+<p>Unchecking the box will remove the noise filtered data and the original data will reappear. </p>
+<p>If you select points from the noise filtered plot, the points exported will not contain the original raw data. </p>
+<p>Instead, for the specific file, the mean currents from the noise filtered data are presented. </p>
+</li>
+<li>
+<p>Done Point Selection:</p>
+<p>When you have completed selecting all regions of interest in the plot, click on <code>done point selection</code> </p>
+</li>
+<li>
+<p>Export Selected Points:</p>
+<p>Clicking on export selected points will export the following to an excel file called <code>Quant_Selected_Points</code>: </p>
+<ul>
+<li>
+<p>Table 1 [Time Points(first,last)]: A row with range of time points for each selection made in the data file (i.e. for each time the blue bar was dragged from one region to another). Only the first and last time point for each selected region are recorded. A row above with the corresponding point indices is also included. </p>
+</li>
+<li>
+<p>Table 2  [Current Values(first,last)]) : A row with first and last current reading collected from the range of time points for each selection made in the data file (i.e. for each time the blue bar was dragged from one region to another). Only the first and last time current reading for each selected region are recorded. A row above with the corresponding point indices is also included.  </p>
+</li>
+<li>
+<p>Table 3 [Mean Currents (A)]: A row with the mean current from the average of current values across the range of time points for each selection made in the data file. (i.e. if the length of the blue bar was 30s, the first index would include the average of currents measured for 30s corresponding to the first region the blue bar was moved to). A row above with the corresponding point indices is also included. </p>
+</li>
+</ul>
+<p>Notes: </p>
+<pre><code>    - All indexing begins at zero. 
+    - The data is automatically exported into an excel sheet named `Quant_Selected_Points` in the same working directory as the software files.
+</code></pre>
+</li>
+<li>
+<p>Clear Selections :</p>
+<p>Clicking on <code>clear selections</code> will remove the blue bar and allow you to select a different sampling range and a new set of points to be exported. </p>
+</li>
+</ol>
+<p><em><strong>Tab 3: Analytics- Analyte Quantification</strong></em> </p>
+<ol>
+<li>
+<p>Please input the regression line slope:</p>
+<p>Input the slope of the regression line. This could be a slope obtained through earlier analysis using the  <code>Analytics- Point Selection</code> tab. </p>
+</li>
+<li>
+<p>Please input the regression line intercept:</p>
+<p>Input the intercept for the same regression line as the one used for the slope input. </p>
+</li>
+<li>
+<p>Please input the current value:</p>
+<p>Input the current reading you have. Make sure that the calibration regression line parameters correspond to the same sensor used for experimental measurements.</p>
+</li>
+<li>
+<p>Done:</p>
+<p>Once you have completed all fields in the textboxes above this button, click on Done.</p>
+<p>Clicking on done will add the entered values into the table displayed on the window. </p>
+</li>
+<li>
+<p>Calculate concentration:</p>
+<p>After clicking on done, click on <code>calculate concentration</code> to calculate analyte concentration from the current reading and the regression parameters. </p>
+<p>The calculated concentration will appear in the <code>concentration</code> row in the table. </p>
+<p>Steps 1-5 can be repeated multiple times, with either the same regression parameters or varying regression parameters, to calculate the concentration for multiple sensor readings from the current values.</p>
+<p>Currently, the table can hold up to 12 measurements/readings. </p>
+</li>
+<li>
+<p>Export table: </p>
+<p>Clicking on export table will allow you to export the table to an excel file. </p>
+<p>The file can be named and saved in the directory of your choice as a .xslx file.</p>
+</li>
+<li>
+<p>Clear table: </p>
+<p>Clicking on clear table will clear all tabular values. You can re-populate the table by inserting new values into the textboxes in the window. </p>
+</li>
+</ol>
+<h3 id="data-visualization">Data Visualization</h3>
+<p>This window consists of solely one tab. 
+To go through the data analysis follow the steps outlined:C</p>
+<p><em><strong>Tab 1: Visualize Data</strong></em> </p>
+<ol>
+<li>
+<p>Import a data file to visualize: </p>
+<p>To import, select the file in the directory of choice. </p>
+<p>You can import one file or  multiple files simultaneously by clicking the <code>ctrl</code> button and the filename. </p>
+</li>
+<li>
+<p>Select the Manufacturer and file type:</p>
+<p>The import file option currently supports files from the following manufacturers: HEKA and Biologic </p>
+<p>Select the desired file type to proceed.</p>
+</li>
+<li>
+<p>Select X-Axis:</p>
+<p>From the drop down menu, select the desired x-axis. </p>
+<pre><code>For HEKA files, use one of the following: Emon ,Imon, Time
+For Biologic files, use one of the following: Time, Ewe, I
+
+    * Emon and Ewe correspond to the **Potential** header for HEKA and Biologic files respectively 
+    ** Imon and I correspond to the **Current** header for HEKA and Biologic files respectively
+</code></pre>
+</li>
+<li>
+<p>Select Y-Axis: </p>
+<p>From the drop down menu, select the desired x-axis. </p>
+<pre><code>    For HEKA files, use one of the following: Emon ,Imon, Time
+    For Biologic files, use one of the following: Time, Ewe, I
+
+    * Emon and Ewe correspond to the **Potential** header for HEKA and Biologic files respectively 
+    ** Imon and I correspond to the **Current** header for HEKA and Biologic files respectively
+</code></pre>
+</li>
+<li>
+<p>Plot File:</p>
+<p>The data with the selected x and y-axes will be plotted. If more than one file was selected, data for all files and their chosen x-and y-axes will be plotted. </p>
+<p>A legend is available to identify the files displayed.  </p>
+</li>
+<li>
+<p>Save Plot:</p>
+<p>The plot will be saved in the directory of your choice.</p>
+<p>Current supported file formats for saving graphics are: <code>*.jpg</code> and <code>*.tiff</code> file formats </p>
+</li>
+<li>
+<p>Clear Plot:</p>
+<p>Data from the most currently plotted file will be cleared from the window. Clicking on plot file will cause the data to reappear. </p>
+</li>
+</ol>
+<h3 id="under-development">Under Development</h3>
+<p>Future releases will include plot formatting functionality as well as other data treatment processes. </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../license/" class="btn btn-neutral float-right" title="Copyright and Licenses">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../about/" class="btn btn-neutral" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../about/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../license/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
