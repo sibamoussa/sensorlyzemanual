@@ -503,15 +503,28 @@ To go through the data analysis follow the steps outlined for each tab:</p>
 <p>Clicking on <code>export normalized calibration data</code> will automatically save the calibration data in an excel file named <code>Normalized Calibration</code> located in the same working directory as the software. </p>
   <p>The data exported data will consist of two tables in the same sheet: </p>
  <ul style="list-style-type:circle">  
-   <li> Table 1: Columns with the 1) concentration, 2) background subtracted average currents (normalized average currents) from all the data files for each concentration<em> , 3) standard deviation of the normalized currents used to calculate the mean current</em><em>, standard error of the mean (SEM) for each normalized mean current value</em><strong> 
- </li>
-<li> Table 2: Calibration regression statistics [ R², Intercept, Slope, LOD, LOQ, Standard Deviation of the Blank</strong>**]
+   <li> Table 1: Columns with the:
+     <ul>
+       <li> Concentration </li>
+         <li> Background subtracted average currents (normalized average currents) from all the data files for each concentration<em> </li>
+          <li> Standard deviation of the normalized currents used to calculate the mean current</em><em>, standard error of the mean (SEM) for each normalized mean current value</em><strong> 
+     </li>
+   </li>
+  </ul>
+<li> Table 2: Calibration regression statistics:
+  <ul>
+    <li> R², Intercept, Slope, LOD, LOQ, Standard Deviation of the Blank </li>
+  </ul>
  </li>
 </ul>
 <li>For each set of currents obtained for a single data file, the currents are normalized by subtracting the background current from each current value. Once this has been completed for each file, the mean current for each concentration from the different files is calculated and displayed in the table. 
-   <strong> The standard deviation for the baseline (zero) concentration will always be zero.<br />
-</strong><em> The standard error of the mean for the baseline (zero) concentration will always be zero. 
-   </em>*** For LOD and LOQ calculations, the the standard deviation of the blank used is the standard deviation of the unnormalized current readings for the blank signals. </li>
+  Notes:
+  <ul>
+    <li> The standard deviation for the baseline (zero) concentration will always be zero. </li>
+    <li> The standard error of the mean for the baseline (zero) concentration will always be zero. </li>
+    <li> For LOD and LOQ calculations, the the standard deviation of the blank used is the standard deviation of the unnormalized current readings for the blank signals.</li>
+  </ul>
+        </li>
 </ul>
 </li>
 </ol>
