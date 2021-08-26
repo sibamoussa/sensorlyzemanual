@@ -447,7 +447,9 @@ To go through the data analysis follow the steps outlined for each tab:</p>
 <li>
 <p>Plot Calibration:</p>
 <p>Clicking on plot calibration will show a plot of the calibration along with the following regression parameters:
-           - R², Slope, Intercept, LOD<em>, and LOQ</em><em>
+   <ul style="list-style-type:circle">  
+   <li>R², Slope, Intercept, LOD<em>, and LOQ</em><em> </li>
+  </ul>
            * LOD is the limit of detection, defined as 3 times the standard deviation of the blank signal divided by the slope of the regression line.
            </em>* LOQ  is the limit of quantification, defined as 10 times the standard deviation of the blank signal divided by the slope of the regression line. 
            For more information on detection limits, see [https://en.wikipedia.org/wiki/Detection_limit]
@@ -461,14 +463,19 @@ To go through the data analysis follow the steps outlined for each tab:</p>
 <li>
 <p>Export Calibration Data:</p>
 <p>Clicking on <code>export calibration data</code> will automatically save the calibration data in an excel file named <code>Calibration</code> located in the same working directory as the software. </p>
-<p>The data exported data will consist of two tables in the same sheet: 
-   - Table 1: Columns with the 1) concentration, 2) average currents from all the data files for each concentration , 3) standard deviation for the currents used to calculate the mean current , standard error of the mean (SEM) for each mean current value 
-   - Table 2: Calibration regression statistics [ R², Intercept, Slope, LOD, and LOQ]</p>
+  <p>The data exported data will consist of two tables in the same sheet: </p>
+     <ul style="list-style-type:circle">  
+   <li> Table 1: Columns with the 1) concentration, 2) average currents from all the data files for each concentration , 3) standard deviation for the currents used to calculate the mean current , standard error of the mean (SEM) for each mean current value 
+ </li>
+   <li>  Table 2: Calibration regression statistics [ R², Intercept, Slope, LOD, and LOQ]
+ </li>
+  </ul>
 </li>
 <li>
 <p>Plot Normalized Calibration:</p>
-<p>Clicking on plot normalized calibration will show a plot of the normalized calibration along with the following regression parameters:
-           - R², Slope, Intercept, LOD<em>, and LOQ</em>*</p>
+<p>Clicking on plot normalized calibration will show a plot of the normalized calibration along with the following regression parameters: </p>
+    <ul style="list-style-type:circle">  
+   <li> R², Slope, Intercept, LOD<em>, and LOQ </li>
 <pre><code>      * LOD is the limit of detection, defined as 3 times the standard deviation of the blank signal divided by the slope of the regression line.
 
        ** LOQ  is the limit of quantification, defined as 10 times the standard deviation of the blank signal divided by the slope of the regression line. 
@@ -485,10 +492,13 @@ To go through the data analysis follow the steps outlined for each tab:</p>
 <li>
 <p>Export Normalized Calibration Data:</p>
 <p>Clicking on <code>export normalized calibration data</code> will automatically save the calibration data in an excel file named <code>Normalized Calibration</code> located in the same working directory as the software. </p>
-<p>The data exported data will consist of two tables in the same sheet: 
-   - Table 1: Columns with the 1) concentration, 2) background subtracted average currents (normalized average currents) from all the data files for each concentration<em> , 3) standard deviation of the normalized currents used to calculate the mean current</em><em>, standard error of the mean (SEM) for each normalized mean current value</em><strong> 
-   - Table 2: Calibration regression statistics [ R², Intercept, Slope, LOD, LOQ, Standard Deviation of the Blank</strong>**]</p>
-<ul>
+  <p>The data exported data will consist of two tables in the same sheet: </p>
+ <ul style="list-style-type:circle">  
+   <li> Table 1: Columns with the 1) concentration, 2) background subtracted average currents (normalized average currents) from all the data files for each concentration<em> , 3) standard deviation of the normalized currents used to calculate the mean current</em><em>, standard error of the mean (SEM) for each normalized mean current value</em><strong> 
+ </li>
+<li> Table 2: Calibration regression statistics [ R², Intercept, Slope, LOD, LOQ, Standard Deviation of the Blank</strong>**]
+ </li>
+</ul>
 <li>For each set of currents obtained for a single data file, the currents are normalized by subtracting the background current from each current value. Once this has been completed for each file, the mean current for each concentration from the different files is calculated and displayed in the table. 
    <strong> The standard deviation for the baseline (zero) concentration will always be zero.<br />
 </strong><em> The standard error of the mean for the baseline (zero) concentration will always be zero. 
